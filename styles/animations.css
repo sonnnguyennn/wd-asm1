@@ -1,0 +1,18 @@
+@keyframes pageLoad {
+    from {
+        transform: translateY(10vh);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slider {
+    from {
+        left: -50%;
+    }
+    to {
+        left: -23%;
+    }
+}

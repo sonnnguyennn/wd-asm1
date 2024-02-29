@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+html, body {
+    /* max-width: 100%; */
+    overflow-x: hidden;
+}
+ul li{
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+
+/* HEADER */
+body{
+    background-color: #0F0F0F;
+}
+.header{
+    width: 50px;
+    position: fixed;
+    right: 2vw;
+    top: 28%;
+    z-index: 20;
+    /* background-color: red; */
+}
+.navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.icon-box{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* background-color: #FFB400; */
+    border-radius: 50%;
+    margin: 15% 0;
+    position: relative;
+    cursor: pointer;
+}
+.icon-box:hover .icon-active{
+    right: 0;
+    opacity:1;
+}
+.icon-box:hover .icon-wrap{
+    background-color: #FFB400;
+}
+.icon-wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2B2B2B;
+    position: relative;
+    z-index: 30;
+    border-radius: 50%;
+    transition: 0.25s ease;
+}
+.wrap-3{
+    background-color: #FFB400;
+}
+.icon-active{
+    position: absolute;
+    height: 100%;
+    display: flex;
+    right:-80%;
+    align-items: center;
+    background-color: #FFB400;
+    color: white;
+    font-weight: 400;
+    border-radius: 2em;
+    z-index: 10;
+    opacity: 0;
+    transition: 0.25s ease;
+    pointer-events: none;
+}
+.icon-box::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 150%;
+    left: 50%;
+    background-color:#0F0F0F;
+    z-index: 20;
+    pointer-events: none;
+}
+.icon-active p{
+    margin: 0 55px 0 30px;
+}
+.icon-box span{
+    color: white;   
+}
+
+
+
+/* ACHIEVEMENTS SECTION */
+.achievements{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.achievement-h1{
+    color: white;
+    font-size: 3.5em;
+    font-weight: 900;
+    margin: 10vh 0 2vh;
+    text-align: center;
+}
+.introduction{
+    text-align: center;
+    width: 75%;
+    line-height: 1.8em;
+    color: white;
+    font-style: italic;
+    margin-bottom: 8vh;
+    font-weight: 300;
+}
+.container{
+    width: 90%;
+}
+.timeline{
+    width: 100%;
+    /* background-color: lightpink; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 3vh 0;
+}
+.time-box{
+    width: 30%;
+    padding: 8px;
+    position: relative;
+    box-shadow: 0 0 2px 0.01em grey;
+    border-radius: 10px;
+    margin: 2% 0.8%;
+}
+.icon-edu{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    color: white;
+    background-color: #FFB400;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;;
+}
+.icon-edu span{
+    margin: auto;
+}
+.fa-arrow-right{
+    color: #FFB400;
+}
+.time{
+    background-color: #2B2B2B;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 8px;
+}
+.time p{
+    color: whitesmoke;
+    font-size: 0.8em;
+}
+.time-box p:nth-child(4){
+    font-size: 0.9em;
+    color: white;
+    font-weight: 200;
+}
+.school{
+    margin: 10px 0;
+    font-weight: 500;
+    font-size: 1.1em;
+    color: white;
+    margin-right:20%;
+}
+
+
+
+/* ANIMATIONS */
+.header, .achievement-h1, .introduction, .time-box {
+    animation: pageLoad 0.5s ease-in-out;
+}
